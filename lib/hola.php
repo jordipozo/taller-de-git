@@ -1,6 +1,7 @@
 <?php
 // Autor: Jordi Pozo <jpozoc@gmail.com>
-// El nombre por defecto es Mundo
+require('HolaMundo.php');
+
 print "Introduce tu nombre";
-$nombre = isset($argv[1]) ? $argv[1] : "Mundo";
-@print "Hola {$nombre}\n";
+$nombre = trim(fgets(STDIN));
+print new HolaMundo($nombre);
